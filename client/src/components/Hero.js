@@ -27,6 +27,7 @@ function Hero() {
         <div className='pt-12'>
           <h1 className='m-auto border-[1px] border-[#1d8f7f] rounded p-4 text-center w-1/2 text-4xl text-white'>Every halal restaurant in one place.</h1>
         </div>
+        <h1 className='text-white mt-12 pl-8 text-4xl' >Featured: Calgary's Choice</h1>
     </div>    
   )
 }
