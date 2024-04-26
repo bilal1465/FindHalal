@@ -1,6 +1,6 @@
 import React from 'react'
 
-function FeaturedCards(props) {
+function RestaurantCards(props) {
   return (
     <div className='flex flex-col w-1/6 h-1/2'>
         <div className='bg-green-400 h-64 w-full bg-cover bg-center overflow-hidden' style={{backgroundImage: `url(${props.image})`}}>
@@ -11,4 +11,4 @@ function FeaturedCards(props) {
   )
 }
 
-export default FeaturedCards
+export default RestaurantCards

@@ -1,13 +1,14 @@
 import React from 'react'
 import { GiChiliPepper, GiOlive, GiHamburger } from "react-icons/gi";
+import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
     <div className='h-svh' >
-        <div className="flex items-center justify-center flex-row bg-bottom bg-cover h-4/6 space-x-28" style={{backgroundImage: "url('restaurant_hero.jpg')"}}>
+        <div className="flex items-center justify-center flex-row bg-bottom bg-cover h-4/6 space-x-28" style={{backgroundImage: "url('media/restaurant_hero.jpg')"}}>
           <div className='flex flex-col items-center justify-center'>
             <div className='flex items-center justify-center bg-[#1b9985] rounded-full p-4 h-min w-min'>
-              <GiChiliPepper className='size-10 text-white' />
+              <Link to="/desi"><GiChiliPepper className='size-10 text-white' /></Link>
             </div>
             <h1 className='text-white text-2xl' ><a>Desi</a></h1>           
           </div>

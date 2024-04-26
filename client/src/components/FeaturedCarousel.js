@@ -1,5 +1,5 @@
 import {React, useEffect, useState} from 'react'
-import FeaturedCards from './FeaturedCards'
+import RestaurantCards from './RestaurantCards'
 
 function FeaturedCarousel() {
 
@@ -7,7 +7,7 @@ function FeaturedCarousel() {
 
     useEffect(() => {
         const getImageData = async () => {
-            const response = await fetch("http://localhost:5001/desi");
+            const response = await fetch("http://localhost:5001/featured");
             const data = await response.json();
             console.log(data)
             setRestaurantData(data);
@@ -20,7 +20,7 @@ function FeaturedCarousel() {
   return (
     <div className='flex flex-row space-x-4 items-center justify-center' >
         {restaurantData && restaurantData.map(card => (
-            <FeaturedCards
+            <RestaurantCards
                 className='w-2/3 h-2/3'
                 key={card.id}
                 title={card.title}

@@ -15,12 +15,12 @@ connectToDb((err) => {
     db = getDb()
 })
 
-app.get('/desi', (req,res) => {
+app.get('/featured', (req,res) => {
     db.collection('restaurants')
     .find()
     .toArray()
     .then(restaurants => {
-      res.status(200).json(restaurants);
+      res.status(200).json(restaurants.slice(0,3));
         })
         .catch(() => {
             res.status(500).json({"error": "Something went wrong"})
