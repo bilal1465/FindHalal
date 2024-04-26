@@ -1,19 +1,19 @@
 import React, {useEffect, useState} from 'react';
-import NavBar from './components/NavBar';
-import Hero from './components/Hero';
-import FeaturedCarousel from './components/FeaturedCarousel';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from './pages/Home';
+import About from './pages/About';
 
 function App() {
 
 
-  
 
   return (
-    <main className='overflow-hidden bg-[#191919]'>
-      <NavBar/>
-      <Hero/>
-      <FeaturedCarousel />
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='about' element={<About/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

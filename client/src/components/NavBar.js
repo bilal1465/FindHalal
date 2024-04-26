@@ -1,4 +1,8 @@
 import React from "react";
+import ReactDOM from "react-dom/client";
+import { Link } from "react-router-dom";
+import Hero from '../components/Hero';
+import FeaturedCarousel from '../components/FeaturedCarousel';
 
 function NavBar() {
     return(
@@ -7,10 +11,10 @@ function NavBar() {
                 <img className="h-16" src="Halal_logo.svg.png" alt="Halal Logo"/>
             </div>
             <ul className="flex text-white m-auto flex-row ml-100 space-x-4">
-                <li><a>Home</a></li>
-                <li><a>About Us</a></li>
-                <li><a>Services</a></li>
-                <li><a>Contacts</a></li>
+                <li><Link to="/" >Home</Link></li>
+                <li><Link to="about" >About Us</Link></li>
+                <li><Link to="services">Services</Link></li>
+                <li><Link to="contact">Contacts</Link></li>
             </ul>
         </div>
     )
