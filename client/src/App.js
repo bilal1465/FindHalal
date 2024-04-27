@@ -5,6 +5,7 @@ import About from './pages/About';
 import NavBar from './components/NavBar';
 import Desi from './pages/Desi';
 import Arab from './pages/Arab';
+import Western from './pages/Western';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='about' element={<About/>}/>
         <Route path='desi' element={<Desi/>}/>
         <Route path='arab' element={<Arab />} />
+        <Route path='western' element={<Western />}/>
       </Routes>
     </BrowserRouter>
   )

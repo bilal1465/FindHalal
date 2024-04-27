@@ -51,3 +51,16 @@ app.get('/getArab', (req, res) => {
     })
 })
 
+app.get('/getWestern', (req, res) => {
+    db.collection('western')
+    .find()
+    .toArray()
+    .then(westernRestaurants => {
+        res.status(200).json(westernRestaurants);
+    })
+    .catch(() => {
+        res.status(500).json({"error": "Something went wrong"})
+    })
+})
+
+
