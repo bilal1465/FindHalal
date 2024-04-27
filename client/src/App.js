@@ -9,8 +9,6 @@ import Western from './pages/Western';
 
 function App() {
 
-
-
   return (
     <BrowserRouter>
       <NavBar />
