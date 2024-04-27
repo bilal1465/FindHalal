@@ -15,7 +15,7 @@ connectToDb((err) => {
     db = getDb()
 })
 
-app.get('/featured', (req,res) => {
+app.get('/featured', (req, res) => {
     db.collection('restaurants')
     .find()
     .toArray()
@@ -27,4 +27,15 @@ app.get('/featured', (req,res) => {
         })
 })
  
+app.get('/getDesi', (req, res) => {
+    db.collection('restaurants')
+    .find({category: "desi"})
+    .toArray()
+    .then(desiRestaurants => {
+        res.status(200).json(desiRestaurants);
+    })
+    .catch(() => {
+        res.status(500).json({"error": "Something went wrong"})
+    })
+})
 

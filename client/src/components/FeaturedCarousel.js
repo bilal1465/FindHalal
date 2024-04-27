@@ -9,7 +9,6 @@ function FeaturedCarousel() {
         const getImageData = async () => {
             const response = await fetch("http://localhost:5001/featured");
             const data = await response.json();
-            console.log(data)
             setRestaurantData(data);
         }
 
