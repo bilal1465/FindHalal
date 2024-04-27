@@ -1,10 +1,11 @@
 import React from 'react'
+import HeroNav from '../components/HeroNav'
 
 function Desi() {
   return (
     <div className='h-svh' >
-      <div className="flex items-center justify-center flex-row bg-cover h-4/6 space-x-28" style={{backgroundImage: "url('media/desi.jpg')"}}>
-        <h1 className='text-[#1b9985] text-8xl' >Desi</h1>
+      <div className="flex items-center justify-center bg-cover h-4/6" style={{backgroundImage: "url('media/desi.jpg')"}}>
+        <HeroNav />
       </div>
       <div className='flex flex-row'>
         
