@@ -13,7 +13,7 @@ function HeroNav() {
           </div>
           <div className='flex flex-col items-center justify-center'>
             <div className='flex items-center justify-center bg-[#1b9985] rounded-full p-4 h-min w-min'>
-              <GiOlive className='size-10 text-white' />
+              <Link to="/arab"><GiOlive className='size-10 text-white' /></Link>
             </div>
             <h1 className='text-white text-2xl' ><a>Arab</a></h1>            
           </div>

@@ -20,7 +20,7 @@ app.get('/featured', (req, res) => {
     .find()
     .toArray()
     .then(restaurants => {
-      res.status(200).json(restaurants.slice(0,3));
+      res.status(200).json(restaurants);
         })
         .catch(() => {
             res.status(500).json({"error": "Something went wrong"})
@@ -28,11 +28,23 @@ app.get('/featured', (req, res) => {
 })
  
 app.get('/getDesi', (req, res) => {
-    db.collection('restaurants')
-    .find({category: "desi"})
+    db.collection('desi')
+    .find()
     .toArray()
     .then(desiRestaurants => {
         res.status(200).json(desiRestaurants);
+    })
+    .catch(() => {
+        res.status(500).json({"error": "Something went wrong"})
+    })
+})
+
+app.get('/getArab', (req, res) => {
+    db.collection('arab')
+    .find()
+    .toArray()
+    .then(arabRestaurants => {
+        res.status(200).json(arabRestaurants);
     })
     .catch(() => {
         res.status(500).json({"error": "Something went wrong"})

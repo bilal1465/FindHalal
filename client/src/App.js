@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import NavBar from './components/NavBar';
 import Desi from './pages/Desi';
+import Arab from './pages/Arab';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='about' element={<About/>}/>
         <Route path='desi' element={<Desi/>}/>
+        <Route path='arab' element={<Arab />} />
       </Routes>
     </BrowserRouter>
   )
