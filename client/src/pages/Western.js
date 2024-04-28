@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import HeroNav from '../components/HeroNav'
-import RestaurantCards from '../components/RestaurantCards'
 import Restaurants from '../components/Restaurants';
 
 function Western() {
