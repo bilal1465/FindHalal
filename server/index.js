@@ -1,10 +1,12 @@
 const express = require('express')
 const { connectToDb, getDb } = require('./db')
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const app = express()
 
 app.use(cors());
+app.use(bodyParser.json());
 
 let db
 
@@ -63,4 +65,13 @@ app.get('/getWestern', (req, res) => {
     })
 })
 
+app.post('/restaurantInfo', async (req, res) => {
 
+    const { category, name } = req.body;
+    db.collection(`${category}`)
+    .findOne({title: `${name}`})
+    .then(restaurant => {
+        res.status(200).json(restaurant);
+    })
+
+})

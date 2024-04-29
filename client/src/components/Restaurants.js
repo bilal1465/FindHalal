@@ -40,6 +40,7 @@ function Restaurants(props) {
           key={index}
           title={restaurant.title}
           image={restaurant.image}
+          category={restaurant.category}
           />
         } else if (selectedCountry == "Any") {
           return <RestaurantCards
@@ -47,6 +48,7 @@ function Restaurants(props) {
           key={index}
           title={restaurant.title}
           image={restaurant.image}
+          category={restaurant.category}
           />
         }
 })}
