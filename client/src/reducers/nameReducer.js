@@ -1,4 +1,4 @@
-const nameReducer = (state = 0, action) => {
+const nameReducer = (state = {}, action) => {
     switch (action.type){
         case "SEND":
             return state = action.payload
