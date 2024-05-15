@@ -35,8 +35,15 @@ function RestaurantInfo() {
 
 
   return (
-    <div>
-      
+    <div className='p-2 space-y-6'>
+    <h1 className='text-[#1b9985] text-6xl text-center'>{data.title}</h1>
+      <div className='flex flex-row text-white mt-2 space-x-6'>
+        <img className='w-1/2' src={data.image} />
+        <div className='ml-2 space-y-2'>
+          <h1 className='text-3xl text-[#1b9985]'>Description</h1>
+          <p>{data.description}</p>
+        </div>
+      </div>
     </div>
   )
 }
